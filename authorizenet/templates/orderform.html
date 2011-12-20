@@ -7,10 +7,13 @@
 <body>
     <form method="post" action=".">
         {% csrf_token %}
-        <h1>Your Financial Information</h1>
-        
+        <h1>Your Order</h1>
+
+        <h2>Personal Information</h2>
+        {{ personalinfo.as_p }}
+
         <h2>Billing Information</h2>
-        {{ BillingInformationForm.as_p }}
+        {{ billinginfo.as_p }}
         <input type="submit" value="submit" />
     </form>
 </body>
